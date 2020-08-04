@@ -47,12 +47,11 @@ Currently available are:
 **xlutils.copy_sheet(from_sheet, to_sheet)**
 带格式复制一个worksheet，到另一个文件。谁不会复制的拿走不谢
 
-
-    def copy_sheet(from_sheet, to_sheet):
-    for k, v in from_sheet.__dict__.items():
-        if k != '_Worksheet__name':
-            setattr(to_sheet, k, v)
-    return to_sheet
+  def copy_sheet(from_sheet, to_sheet):
+  for k, v in from_sheet.__dict__.items():
+    if k != '_Worksheet__name':
+      setattr(to_sheet, k, v)
+  return to_sheet
     
 Installation
 ============
